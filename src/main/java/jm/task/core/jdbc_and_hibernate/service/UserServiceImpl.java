@@ -2,7 +2,6 @@ package jm.task.core.jdbc_and_hibernate.service;
 
 import jm.task.core.jdbc_and_hibernate.dao.UserDao;
 import jm.task.core.jdbc_and_hibernate.dao.UserDaoHibernateImpl;
-import jm.task.core.jdbc_and_hibernate.dao.UserDaoJDBCImpl;
 import jm.task.core.jdbc_and_hibernate.model.User;
 
 import java.util.List;
@@ -27,7 +26,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public void saveUser(String name, String lastName, byte age) {
         userDao.saveUser(name, lastName, age);
-        System.out.println("User ? ?????? - " + name + " " + lastName + " ???????? ? ???? ??????");
+        System.out.println("User с именем - " + name + " " + lastName + " добавлен в базу данных");
     }
 
     @Override

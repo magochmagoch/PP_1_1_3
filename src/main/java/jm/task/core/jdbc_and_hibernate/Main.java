@@ -1,5 +1,6 @@
 package jm.task.core.jdbc_and_hibernate;
 
+import jm.task.core.jdbc_and_hibernate.dao.UserDaoHibernateImpl;
 import jm.task.core.jdbc_and_hibernate.model.User;
 import jm.task.core.jdbc_and_hibernate.service.UserService;
 import jm.task.core.jdbc_and_hibernate.service.UserServiceImpl;
@@ -20,5 +21,6 @@ public class Main {
         }
         userService.cleanUsersTable();
         userService.dropUsersTable();
+        UserDaoHibernateImpl.closeSessionFactory();
     }
 }
